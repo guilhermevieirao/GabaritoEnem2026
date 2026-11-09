@@ -1,0 +1,28 @@
+name: Testes
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Testes de lógica e dos dados
+        run: npm test
+      - name: Testes no navegador
+        run: npm run test:e2e
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Gabarito consolidado confere com as fontes
+        run: |
+          python3 tools/consolidar_gabarito.py
+          git diff --exit-code data/gabarito-2026.js

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gabarito ENEM 2026 — corrija sua prova e estime sua nota TRI</title>
+  <meta name="description" content="Corrija o 1º dia do ENEM 2026 com o gabarito extraoficial consolidado de 7 correções de cursinhos. Veja acertos por área, questões em disputa e uma estimativa da nota pela TRI baseada nos microdados do INEP.">
+  <meta name="theme-color" content="#14171c">
+  <link rel="canonical" href="https://guilhermevieirao.github.io/GabaritoEnem2026/">
+  <link rel="icon" href="assets/img/icone.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icone-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Gabarito ENEM 2026 — corrija sua prova">
+  <meta property="og:description" content="Gabarito extraoficial do 1º dia consolidado de 7 correções, acertos por área e estimativa de nota TRI.">
+  <meta property="og:url" content="https://guilhermevieirao.github.io/GabaritoEnem2026/">
+  <meta property="og:image" content="https://guilhermevieirao.github.io/GabaritoEnem2026/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cartão-resposta com bolhas preenchidas e o texto Gabarito ENEM 2026">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/atkinson-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script>
+    // Aplica o tema salvo antes da pintura, para não piscar.
+    try {
+      var p = JSON.parse(localStorage.getItem('gabarito-enem-2026') || '{}').preferencias || {};
+      if (p.tema === 'claro' || p.tema === 'escuro') document.documentElement.dataset.tema = p.tema;
+    } catch (e) {}
+  </script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <div class="faixa" aria-hidden="true"></div>
+  <header class="topo">
+    <a class="marca" href="#/" aria-label="Gabarito ENEM 2026, início">
+      <span class="marca-bolhas" id="marca-bolhas" aria-hidden="true"><i class="cheia"></i><i></i><i class="cheia"></i></span>
+      <span>Gabarito ENEM <span class="num">2026</span></span>
+    </a>
+    <nav aria-label="Principal">
+      <a class="btn btn-fantasma" href="#/sobre" aria-label="Como funciona"><span class="so-texto">Como funciona</span><svg class="so-icone" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.2"/></svg></a>
+      <button class="btn btn-fantasma btn-icone" type="button" id="abrir-config" aria-label="Preferências" title="Preferências">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <noscript><p class="painel painel-corpo">Este corretor precisa de JavaScript ativado no navegador.</p></noscript>
+    <div id="app" aria-live="off"></div>
+  </main>
+
+  <footer class="rodape">
+    <span>Gabarito extraoficial. A nota estimada não substitui o resultado do INEP. Seus dados ficam só neste aparelho.</span>
+    <span><a href="#/sobre">Fontes e método</a> · <a href="https://github.com/guilhermevieirao/GabaritoEnem2026">Código-fonte</a></span>
+  </footer>
+
+  <dialog id="dialogo-config" aria-labelledby="titulo-config">
+    <form method="dialog" class="dialogo-corpo">
+      <h2 id="titulo-config">Preferências</h2>
+      <div>
+        <div class="linha-config">
+          <div><strong id="rot-som">Som ao responder</strong><p>Toque curto para acerto e erro.</p></div>
+          <label class="chave"><input type="checkbox" id="pref-som" aria-labelledby="rot-som"><span></span></label>
+        </div>
+        <div class="linha-config">
+          <div><strong id="rot-efeitos">Efeitos visuais</strong><p>Brilho verde ou vermelho ao responder.</p></div>
+          <label class="chave"><input type="checkbox" id="pref-efeitos" aria-labelledby="rot-efeitos"><span></span></label>
+        </div>
+        <div class="linha-config">
+          <div><strong id="rot-imediata">Correção na hora</strong><p>Mostra o gabarito de cada questão assim que você responde.</p></div>
+          <label class="chave"><input type="checkbox" id="pref-imediata" aria-labelledby="rot-imediata"><span></span></label>
+        </div>
+        <div class="linha-config">
+          <div><strong id="rot-tema">Tema</strong></div>
+          <div class="segmentado" role="radiogroup" aria-labelledby="rot-tema">
+            <label><input type="radio" name="tema" value="auto"><span>Automático</span></label>
+            <label><input type="radio" name="tema" value="claro"><span>Claro</span></label>
+            <label><input type="radio" name="tema" value="escuro"><span>Escuro</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="dialogo-acoes"><button class="btn btn-primario" value="ok">Pronto</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="dialogo-lote" aria-labelledby="titulo-lote">
+    <form method="dialog" class="dialogo-corpo" id="form-lote">
+      <h2 id="titulo-lote">Colar respostas</h2>
+      <p class="secundario">Cole ou digite as letras na ordem, por exemplo <span class="mono">ABDCE-EB…</span> (use <span class="mono">-</span> para questão em branco), ou uma lista numerada como <span class="mono">1-A 2-C 3-E</span>. Espaços e quebras de linha são ignorados.</p>
+      <div class="campo">
+        <label for="lote-texto">Respostas</label>
+        <textarea id="lote-texto" spellcheck="false" autocapitalize="characters" autocomplete="off" placeholder="ABCDEABCDE…"></textarea>
+      </div>
+      <div class="campo">
+        <label for="lote-inicio">Começar na questão</label>
+        <input id="lote-inicio" type="number" inputmode="numeric">
+      </div>
+      <p class="previa" id="lote-previa" aria-live="polite">Nada reconhecido ainda.</p>
+      <div class="dialogo-acoes">
+        <button class="btn" value="cancelar" formnovalidate>Cancelar</button>
+        <button class="btn btn-primario" value="aplicar" id="lote-aplicar" disabled>Preencher</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="dialogo-confirmar" aria-labelledby="titulo-confirmar">
+    <form method="dialog" class="dialogo-corpo">
+      <h2 id="titulo-confirmar">Tem certeza?</h2>
+      <p class="secundario" id="texto-confirmar"></p>
+      <div class="dialogo-acoes">
+        <button class="btn" value="nao" autofocus>Cancelar</button>
+        <button class="btn btn-perigo" value="sim" id="botao-confirmar">Confirmar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="avisos" id="avisos" role="status" aria-live="polite"></div>
+</body>
+</html>

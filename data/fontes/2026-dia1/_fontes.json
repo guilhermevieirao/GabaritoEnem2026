@@ -1,0 +1,47 @@
+{
+ "atualizadoEm": "2026-11-08T20:26:00-03:00",
+ "fontes": {
+  "anglo": {
+   "nome": "Anglo",
+   "via": "GCMais",
+   "url": "https://gcmais.com.br/noticias/2026/11/08/gabarito-extraoficial-do-enem-2026-confira-as-respostas-dos-cadernos-azul-amarelo-verde-e-branco",
+   "horario": "08/11, 20h26"
+  },
+  "bernoulli": {
+   "nome": "Bernoulli Educação",
+   "via": "A Tarde / O Tempo",
+   "url": "https://atarde.com.br/conteudopublicitario/enem-2026-confira-o-gabarito-extraoficial-do-primeiro-dia-1407462",
+   "horario": "08/11, noite"
+  },
+  "sas": {
+   "nome": "SAS Educação + Colégio Ari de Sá",
+   "via": "CNN Brasil",
+   "url": "https://www.cnnbrasil.com.br/educacao/gabarito-enem-2026-veja-respostas-extraoficiais-da-prova-azul-no-1o-dia/",
+   "horario": "08/11, 20h16"
+  },
+  "chromos": {
+   "nome": "Chromos Colégio e Pré",
+   "via": "Itatiaia",
+   "url": "https://www.itatiaia.com.br/educacao/gabarito-enem-2026-veja-a-lista-de-respostas-da-prova-amarela/",
+   "horario": "08/11, versão final"
+  },
+  "elite-amplia": {
+   "nome": "Elite + Amplia",
+   "via": "O Globo (reproduzido pela TVT News)",
+   "url": "https://tvtnews.com.br/gabarito-enem-2026-confira-respostas-do-enem/",
+   "horario": "08/11, 20h26"
+  },
+  "estrategia": {
+   "nome": "Estratégia Vestibulares",
+   "via": "site próprio (só o caderno amarelo estava completo)",
+   "url": "https://vestibulares.estrategia.com/portal/noticias/gabarito-prova-amarela-enem-2026-1-dia/",
+   "horario": "08/11, noite"
+  },
+  "alvo": {
+   "nome": "Alvo ENEM",
+   "via": "site próprio (só o caderno branco estava completo)",
+   "url": "https://alvoenem.com/gabarito-enem/2026",
+   "horario": "08/11, 19h06"
+  }
+ }
+}
